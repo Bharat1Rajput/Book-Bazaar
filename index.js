@@ -2,10 +2,13 @@ const express = require('express');
 const app = express();
 const pool = require('./db');
 const authRoutes = require('./routes/auth');
+const bookRoutes = require('./routes/books');
+
 
 
 app.use(express.json());
 app.use('/api/auth', authRoutes);
+app.use('/api/books', bookRoutes);
 
 
 // test route
